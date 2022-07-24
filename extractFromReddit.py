@@ -23,11 +23,11 @@ from webdriver_manager.chrome import ChromeDriverManager
 #MAIN VARIABLES
 AMOUNT_OF_VIDEOS = 1
 AMOUNT_OF_COMMENTS = 15
-MIN_COMMENT_LENGTH = 0
+MIN_COMMENT_LENGTH = 20
 MAX_COMMENT_LENGTH = 300
-STOCK_FOOTAGE_TOPIC_LIST = ['women','woman']
-SUBREDDIT = '' #Input subreddit to search
-TOP_OF_TIME_UNIT = 'year' #Input time unit you'd like to search the top posts of. Options: 'all', 'year', 'month', 'week', 'day', 'hour'
+STOCK_FOOTAGE_TOPIC_LIST = ['video games']
+SUBREDDIT = 'askReddit' #Input subreddit to search
+TOP_OF_TIME_UNIT = 'day' #Input time unit you'd like to search the top posts of. Options: 'all', 'year', 'month', 'week', 'day', 'hour'
 
 #MAIN PATHS
 PICTURE_PATH = r'C:\Users\samlb\Documents\REDDIT_TO_YOUTUBE_PYTHON_SELENIUM_PUBLIC\Topic and Comments Pictures'       #Where the screenshots will be sent to and acquired from
@@ -259,6 +259,8 @@ while(verifiedVideos <= AMOUNT_OF_VIDEOS):
 
     elementCounter = elementCounter+1
     verifiedVideos = verifiedVideos+1
+
+exit()
 
 #Import function to upload to Youtube
 sys.path.insert(1, UPLOAD_TO_YOUTUBE_PATH)
